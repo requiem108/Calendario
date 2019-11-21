@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    padding: 0;
+     overflow-y:auto;
+    overflow-x: hidden;
+}
+.ContenedorCalendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    
+    background-color: silver;
+}
+/*AREA FILTROS--*/
+.AreaFiltros{
+    width: 100%;
+}
+.Cale-Filtro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AreaFiltros label{
+    width: 60px;
+    text-align: center
+}
+.CaleFiltro{
+    height: 32px;
+    margin: 10px 5px;
+    width: 130px;
+    border-radius: 10px;
+    border-style: none;
+    border: solid silver 1px;
+    text-align: center;
+}
+
+/*AREA BOTONES*/
+.AreaBotones{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.CaleBotones {
+    background-color: #0A8C87;
+    border: solid #0A8C87 1px;
+    width: 149px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 5px;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    cursor: pointer;
+    color: white
+}
+.CaleBotones:hover{
+    background-color: #18ada8;
+}
+/*AREA NAVEGACION*/
+.AreaNavegacion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.AreaNavegacion i{
+    font-size: 30px;
+    text-shadow: 5px 2px 2px rgba(150, 150, 150, 1);
+    color: #424242;
+    cursor: pointer;
+}
+.AreaNavegacion i:hover{    
+    color: #575757;    
+}
+.AreaNavegacion label{
+   background-color: #424242;   
+    width: 149px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 5px;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);   
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*AREACALENDARIO*/
+
+
+.AreaCalendario{
+    overflow-y: hidden;
+    overflow-x:auto;
+    width:100%;
+}
+.Calendario{
+   display: flex; 
+   width: 560px; 
+}
+
+
+/*CALENDARIO*/
+
+.Dia{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto 25px;
+}
+.DiaON{    
+    background-color: #0A8C87; 
+    color: white;
+}
+.DiasHoras {
+    width: 100%;    
+    background-color: white;
+    border-collapse: collapse;
+    
+}
+.DiasHoras th{
+    width: 80px;
+    height: 40px;
+    padding: 4px 0px;
+}
+
+.DiasHoras tr:nth-child(2n+1){
+    border-bottom: solid silver 1px;
+}
+.DiasHoras td{     
+    height: 10px;
+    padding: 5px 15px 5px 5px;
+   text-align: center;
+    border-left: solid silver 1px;
+    border-right: solid silver 1px;
+/*    border: solid silver 1px;*/
+    
+}
+
+/*BOTONES DE CITAS*/
+.BotonCita{
+    min-width: 40px;
+    width: 40%;
+    height: 20px;      
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #0A8C87;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+.BotonCitaSelect{
+    background-color: #18a8a3;
+    height: 25px;
+    width: 41%;
+    margin: 2px;
+}
+
+/*REGLA HORAS*/
+.DiasHoras  .ReglaHora{
+    position: absolute;    
+    font-size: 14px;
+    color:#424242;
+    margin-left: 0px;
+    transition: .5s;
+   border-style: none;
+    position: absolute;
+   
+    
+}
+
+
+/*MEDIA QUERY*/
+@media(min-width: 576px){ 
+    .AreaFiltros{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+            
+    }
+    .Calendario{
+        width: 100%;
+        
+    }
+    .DiasHoras{
+        width: 100%;
+    }
+     .DiasHoras th{
+        width: 14%;
+    }
+    .Dia{
+        margin: auto;
+    }
+    
+}
+
