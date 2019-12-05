@@ -1,0 +1,261 @@
+.btnOFF{
+    display: none;
+}
+.BotonModificar{
+    width: 50px;
+    height: 30px;
+    background-color: #299E99;
+    border: solid #75D6D3 1px;
+    border-radius: 10px;
+    margin: 0px 5px;
+}
+.BotonModificar i{
+    font-size: 20px;
+    color: #B0EEEC;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.BotonModificar:hover{
+    background-color: #B0EEEC;
+   
+}
+.BotonModificar i:hover{
+    
+    color: #299E99
+}
+/*BOTON DESACTIVAR CUENTA*/
+.BotonDesactivar {
+    width: 50px;
+    height: 30px;
+    background-color: #f95a5e;
+    border: solid #f8c6c7 1px;
+    border-radius: 10px;
+   
+}
+
+.BotonDesactivar i{
+    font-size: 20px;
+    color: #f8c6c7;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.BotonDesactivar:hover{
+    
+    background-color: #f8c6c7;
+}
+.BotonDesactivar i:hover{
+    
+    color: #f95a5e;
+}
+
+/*BOTON ACTIVAR CUENTA*/
+.BotonActivar {
+    width: 50px;
+    height: 30px;
+    background-color: #64DB38;
+    border: solid #A0F083 1px;
+    border-radius: 10px;
+}
+
+.BotonActivar i{
+    font-size: 20px;
+    color: #A0F083;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.BotonActivar:hover{
+    
+    background-color: #A0F083;
+}
+.BotonActivar i:hover{
+    
+    color: #64DB38;
+}
+/*Modulo Administrar citas seccion Administrar*/
+.botonesAdministrarCita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    background-color: #424242;
+    flex-wrap: wrap;
+}
+/*PLUS ICON ---------------*/
+.plusIcon{
+    display: flex;    
+    justify-content: center;
+}
+.plusIcon select{
+    border-radius: 0px 0px 0px 0px;
+    border: none
+}
+.plusIcon .botonPlus{
+    width: 24px;
+    height: 24px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;  
+}
+
+.plusIcon .botonPlusMod{
+    width: 26px;
+    height: 26px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    
+    background-color: white;
+    cursor: pointer;
+     border-radius: 10px 0px 0px 10px;
+    font-size: 16px;
+}
+.plusIcon i:hover{
+    color: silver;
+}
+.ventanaPlus{
+    width: 100vw;
+    height: 100%;
+    background-color: #424242;
+    position: fixed;
+    z-index: 200;
+    box-sizing:border-box;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+/*    margin-top: 50px;*/
+}
+.ventanaPlus i:nth-child(1){
+    position:absolute;
+    right: 40px;
+    top: 20px;
+    color: silver;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+
+.ventanaPlus i:hover{
+    color: black;
+}
+.venPOff{
+    display: none;
+}
+
+
+
+/*-------- ETIQUETAS------ */
+.etiquetaSimple{
+    background-color: #424242;
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    box-sizing: border-box;
+    color: white;
+     -webkit-box-shadow: 2px 10px 10px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 10px 10px -10px rgba(0,0,0,0.75);
+    box-shadow: 2px 10px 10px -10px rgba(0,0,0,0.75);
+    margin: 20px 0px;
+}
+/*BOTON PLUS AFFECCIONES*/
+
+.botonAffecciones{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 45px;    
+    color: #0A8C87;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+        
+}
+
+/*BOTON ELIMINAR IMAGEN DE CONSULTAR PACIENTE*/
+.EliminarIMG{
+    width: 40px;
+    height: 40px;
+/*    position: absolute;*/
+    background-color: #424242;
+    margin-top: 10px;
+    border-radius: 50%;
+     -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    color: white;
+   text-align: center;
+    font-size: 25px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+/*BOTON AGREGAR COMENTARIOCONSULTAR PACIENTE*/
+.btnNewComentario{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: silver;
+    color: black;
+    box-sizing: border-box;
+    padding: 11px 10px;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    cursor: pointer;
+        
+}
+/*GLOBO DE INFORMACION PARA CONFIRMAR CITA*/
+
+.GloboInfo{
+       width: 20px;
+    height: 23px;
+    background-color: #f95a5e;
+    position: relative;
+    top: -48px;
+  -webkit-box-shadow: 1px 1px 4px 2px rgba(65, 65, 65, 0.75);
+    -moz-box-shadow: 1px 1px 4px 2px rgba(65, 65, 65, 0.75);
+    box-shadow: 1px 1px 4px 2px rgba(65, 65, 65, 0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.GloboInfo::after{
+    content: "";
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-color: #f95a5e;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+   
+        
+        
+}
+@media(min-width: 576px){  
+ 
+    .ventanaPlus{
+/*        margin: 160px 0px 0px -10px;*/
+    }
+}

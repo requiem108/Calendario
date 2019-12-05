@@ -4,22 +4,180 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/Calendario.css">
-    
+    <link rel="stylesheet" href="css/Calendario.css">    
     <link rel="stylesheet" href="css/Scroll.css">
+    <link rel="stylesheet" href="css/Modulo.css">
+    <link rel="stylesheet" href="css/Botones.css">
+    <link rel="stylesheet" href="css/CheckBox.css">
+    
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title></title>
 </head>
 
 <body>
-   
+  <!-- Ventana PLUS -->  
+  <div class="ventanaPlus venPOff" id="CaNW-VentanaPlus">
+    <i class="fas fa-times-circle cerrarPlus" id="CaNW-CerrarPlus"></i> 
+    
+       <div  class="Cale-Especialidad" id="CaNW-ContenedorFormulario" >
+         
+         <div class="AreaSucursalDoctor">
+              <div class="Cale-Filtro">
+             <label >Sucursal</label>
+              <select class="CaleFiltro" id="CaNW-SucursalP">
+                    <option value="0">Sucursal</option>
+                    <option value="1">Sucursal A</option> 
+                    <option value="2">Sucursal B</option> 
+            </select>
+          </div>
+            
+            <!--          SELECCIONAR DOCTOR-->
+          <div class="Cale-Filtro">
+                <label >Doctor</label>
+                 <select class="CaleFiltro" id="CaNW-FsucP" name="CP_selectTel/Nombre" required="">
+                       <option value="0">Doctor</option>
+                       <option value="1">Omar Santillano</option> 
+                       <option value="2">Brenda Narvaes</option> 
+               </select>
+             </div>
+             
+         </div>
+           
+
+             <!--   AGREGAR PACIENTE -->
+             <div>
+                 <!-- BUSCAR PACIENTE -->
+<!--                    <label >Paciente</label>-->
+                    <div class="BotonShowFiltros">
+                                            <label >
+                                            BuscarPacientes       
+                                            </label>
+                                            <span class="fas fa-angle-down" id="CaNWBotonS"></span>
+                                            
+                                        </div>
+                    <div>
+                            <form id="CaNW_formPrincipal" class="Cale_formPrincipal" style="margin-bottom: 15px">
+                                <div>
+                                        <input class="filtroTablaOff inputTexto" type="text" id="CaNW_Tel/Nombre" name="CP_Tel/Nombre" placeholder="" pattern="[0-9]{10,10}" title="No se aceptan caracteres especiales y en telefono solo numeros" required="" maxlength="10">
+                                        
+                                        
+                                 
+                                        <select class="filtroTablaOff" id="CaNW_selectTel/Nombre" name="CP_selectTel/Nombre" required="">
+                                                 <option value="Telefono">Telefono</option>
+                                                 <option value="Nombre">Nombre</option> 
+                                         </select> 
+                                </div>                                 
+                                     
+                                      <input class="CaleBotones" id="CaNW_BuscarPaciente" onclick="" class="elementoBotonSm" type="submit" value="Buscar" onpaste="return false">
+                            </form>
+                    </div>
+
+                    <!-- LISTAS DE PACIENTES A SELECCIONAR-->
+                    <div class="scrollbar" id="Cale-ContenedorTabla">
+                        <table class="Cale-TablaUsuario" id="CaNW-TablaUsuario">                       
+
+                        </table>
+                    </div>
+
+             </div>
+
+             <!--Estatus y boton guardar cita  -->
+             <div>
+                 <input  class="CaleBotones" id="CaNW-BotonGuardarCita" type="submit" value="Nueva cita" >
+                 
+                 <label id="LabelestadoCita" >Estado</label>
+             </div>
+            
+            </div>                                         
+</div>
+ 
+  <!-- Ventana PLUS -->  
+  <div class="ventanaPlus venPOff" id="Cale-VentanaPlus">
+    <i class="fas fa-times-circle cerrarPlus" id="Cale-CerrarPlus"></i> 
+    
+       <div  class="Cale-Especialidad" id="Cale-ContenedorFormulario" >
+         
+         <div class="AreaSucursalDoctor">
+              <div class="Cale-Filtro">
+             <label >Sucursal</label>
+              <select class="CaleFiltro" id="Cale-SucursalP">
+                    <option value="0">Sucursal</option>
+                    <option value="1">Sucursal A</option> 
+                    <option value="2">Sucursal B</option> 
+            </select>
+          </div>
+            
+            <!--          SELECCIONAR DOCTOR-->
+          <div class="Cale-Filtro">
+                <label >Doctor</label>
+                 <select class="CaleFiltro" id="Cale-FsucP" name="CP_selectTel/Nombre" required="">
+                       <option value="0">Doctor</option>
+                       <option value="1">Omar Santillano</option> 
+                       <option value="2">Brenda Narvaes</option> 
+               </select>
+             </div>
+             
+         </div>
+           
+
+             <!--   AGREGAR PACIENTE -->
+             <div>
+                 <!-- BUSCAR PACIENTE -->
+<!--                    <label >Paciente</label>-->
+                    <div class="BotonShowFiltros">
+                                            <label >
+                                            BuscarPacientes       
+                                            </label>
+                                            <span class="fas fa-angle-down" id="CaleBotonS"></span>
+                                            
+                                        </div>
+                    <div>
+                            <form id="Cale_formPrincipal" class="Cale_formPrincipal" style="margin-bottom: 15px">
+                                <div>
+                                        <input class="filtroTablaOff inputTexto" type="text" id="Cale_Tel/Nombre" name="CP_Tel/Nombre" placeholder="" pattern="[0-9]{10,10}" title="No se aceptan caracteres especiales y en telefono solo numeros" required="" maxlength="10">
+                                        
+                                        
+                                 
+                                        <select class="filtroTablaOff" id="Cale_selectTel/Nombre" name="CP_selectTel/Nombre" required="">
+                                                 <option value="Telefono">Telefono</option>
+                                                 <option value="Nombre">Nombre</option> 
+                                         </select> 
+                                </div>                                 
+                                     
+                                      <input class="CaleBotones" id="Cale_BuscarPaciente" onclick="" class="elementoBotonSm" type="submit" value="Buscar" onpaste="return false">
+                            </form>
+                    </div>
+
+                    <!-- LISTAS DE PACIENTES A SELECCIONAR-->
+                    <div class="scrollbar" id="Cale-ContenedorTabla">
+                        <table class="Cale-TablaUsuario" id="Cale-TablaUsuario">                       
+
+                        </table>
+                    </div>
+
+             </div>
+
+             <!--Estatus y boton guardar cita  -->
+             <div>
+                 <input  class="CaleBotones" id="Cale-BotonGuardarCita" type="submit" value="Guardar" >
+                 
+                 <label id="LabelestadoCita" >Estado</label>
+             </div>
+            
+            </div>                                         
+</div>
+
+<!-- BOTON FLOTANTE PARA MODIFICAR CITA -->
+
+
+<!-- CALENDARIO -->
    <div class="ContenedorCalendario">
        <div class="AreaFiltros">
 <!--         SUCURSAL FILTRO-->
           <div class="Cale-Filtro">
              <label >Sucursal</label>
-              <select class="CaleFiltro" id="Cale-Fsuc" name="CP_selectTel/Nombre" required="">
+              <select class="CaleFiltro" id="Cale-Sucursal">
                     <option value="0">Sucursal</option>
                     <option value="1">Sucursal A</option> 
                     <option value="2">Sucursal B</option> 
@@ -30,7 +188,7 @@
           <div class="Cale-Filtro">
              <label >Doctor</label>
               <select class="CaleFiltro" id="Cale-Fsuc" name="CP_selectTel/Nombre" required="">
-                    <option value="0">Doctor</option>
+                    <option value="0">Todos...</option>
                     <option value="1">Omar Santillano</option> 
                     <option value="2">Brenda Narvaes</option> 
             </select>
@@ -47,237 +205,13 @@
        <div class="AreaNavegacion">
            <i class="fas fa-chevron-circle-left"></i>
            
-           <label >Informacion</label>
+           <label>Informacion</label>
            
           <i class="fas fa-chevron-circle-right"></i>
        </div>
        <div class="AreaCalendario scrollbar">
            <div class="Calendario">  
-                  <table class="DiasHoras">
-                      <tr class="DiaCabezera">
-                         <th class="ReglaHora"></th>
-                          <th><div class="Dia">17</div><label>lun</label></th>
-                          <th><div class="Dia">18</div><label>mar</label></th>
-                          <th><div class="Dia DiaON">19</div><label>mier</label></th>
-                          <th><div class="Dia">20</div><label>jue</label></th>
-                          <th><div class="Dia">21</div><label>vie</label></th>
-                          <th><div class="Dia">22</div><label>sab</label></th>
-                          <th><div class="Dia">23</div><label>dom</label></th>
-                      </tr>
-                      <tr>
-                         <td class="ReglaHora">10:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td><div class="BotonCita">10:00</div>
-                          <div class="BotonCita">10:00</div></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td><div class="BotonCita BotonCitaSelect">10:30</div></td>
-                          <td></td> 
-                          <td></td>
-                          <td></td>
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">11:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>                          
-                          <td></td> 
-                          <td></td>
-                      </tr>
-                        <tr>                         
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                          <td></td>
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">12:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">13:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">14:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td><div class="BotonCita">14:00</div></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">10:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">16:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                         <td class="ReglaHora">17:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td class="ReglaHora">18:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td class="ReglaHora">19:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                        <tr>
-                          <td class="ReglaHora">20:00</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td> 
-                      </tr>
-                      
+                  <table class="DiasHoras" id="CalendarioTabla">
                   </table>
                    
                
@@ -288,6 +222,11 @@
        
        
    </div>
+   <script src="js/VentanaModal.js"></script>
+   <script src="js/Promesa/Direcciones.js"></script>
+    <script src="js/Promesa/Calendario.js"></script>
+    <script src="js/Promesa/ControladorCalendario.js"></script>
+    <script src="js/Promesa/ControladorCalendarioVentanaPlus.js"></script>
     
 </body>
 </html>

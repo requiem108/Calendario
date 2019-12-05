@@ -13,7 +13,7 @@ body{
     
     background-color: silver;
 }
-/*AREA FILTROS--*/
+/*AREA FILTROS---------------------*/
 .AreaFiltros{
     width: 100%;
 }
@@ -36,7 +36,7 @@ body{
     text-align: center;
 }
 
-/*AREA BOTONES*/
+/*AREA BOTONES-----------------------*/
 .AreaBotones{
     width: 100%;
     display: flex;
@@ -58,7 +58,7 @@ body{
 .CaleBotones:hover{
     background-color: #18ada8;
 }
-/*AREA NAVEGACION*/
+/*AREA NAVEGACION---------------------*/
 .AreaNavegacion{
     width: 100%;
     display: flex;
@@ -90,7 +90,7 @@ body{
     align-items: center;
     
 }
-/*AREACALENDARIO*/
+/*AREACALENDARIO-----------------------------*/
 
 
 .AreaCalendario{
@@ -124,6 +124,7 @@ body{
     width: 100%;    
     background-color: white;
     border-collapse: collapse;
+    transition: .5s;
     
 }
 .DiasHoras th{
@@ -134,6 +135,7 @@ body{
 
 .DiasHoras tr:nth-child(2n+1){
     border-bottom: solid silver 1px;
+    background-color: rgb(245, 245, 245);
 }
 .DiasHoras td{     
     height: 10px;
@@ -145,30 +147,82 @@ body{
     
 }
 
-/*BOTONES DE CITAS*/
+
+/*BOTONES DE CITAS----------------------------------*/
 .BotonCita{
     min-width: 40px;
     width: 40%;
-    height: 20px;      
+    /* height: 20px; */
     display: inline-block;
     margin: 5px;
-    border-radius: 5px;
-    background-color: #0A8C87;
+    border-radius: 5px;    
     -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
     box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     padding: 2px;
     box-sizing: border-box;
+    max-height: 32px;
+    overflow: hidden;
+    transition: .3s;
+    color: white;
+}
+.BotonCDatos{
+    display: flex;
+    flex-direction: column;
+}
+.citaConfirmar{
+    background-color: rgb(226, 151, 91);;
+}
+.citaAgendada{
+    background-color: #4fe2a2;
+    color: #424242;
+}
+.citaCancelada{
+    background-color: rgb(38, 65, 64);
+    opacity: .5;
+}
+.citaConcluido{
+    background-color: rgb(163, 177, 112);
 }
 .BotonCitaSelect{
-    background-color: #18a8a3;
-    height: 25px;
-    width: 41%;
-    margin: 2px;
+    background-color: #f95a5e;   
+    width: 41%;    
 }
-
+/*BOTON MODIFICAR CITA*/
+.botonModCita{
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #424242;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    margin: -60px 60px;
+  
+}
+.botonModCita::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: #424242;
+    transform: rotate(45deg);
+    position: absolute;
+    margin-left: -7px;    
+   }
+.botonModCita i{
+    z-index: 1;
+}
+.botonModCitaOFF{
+    display: none;
+}
 /*REGLA HORAS*/
 .DiasHoras  .ReglaHora{
     position: absolute;    
@@ -180,6 +234,102 @@ body{
     position: absolute;
    
     
+}
+
+/*VENTANA MODAL O PLUS venPOff------------------*/
+.Cale-Especialidad{
+    width: 90%;
+    max-width: 600px;
+    background: linear-gradient(to bottom, rgba(224,224,224,1) 0%, rgb(208, 208, 208) 100%);
+    border-radius: 15px;
+    padding: 10px
+}
+.AreaSucursalDoctor{
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+}
+.BotonShowFiltros{/*fltros paciente*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+}
+.BotonShowFiltros label{
+
+}
+.BotonShowFiltros .fas{
+    background-color: rgb(156, 156, 156);
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.Cale_formPrincipal{/*Formulario*/
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+    background-color: #9c9c9c;
+    border-radius: 10px
+}
+.Cale_formPrincipal div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Cale_formPrincipal div *{
+    border-style: none;
+    width: 40%;
+    height: 30px;
+    border-radius: 15px;
+    border: solid 1px silver;
+    text-align: center;
+}
+.Cale-Especialidad div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.Cale-TablaUsuario{
+    background-color: #9d9d9d;
+    width: 100%;
+    border-radius: 10px;;
+}
+.Cale-TablaUsuario tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    margin: 2px;
+    border-bottom: solid silver 1px;
+    padding: 2px 0px;
+}
+.CalePTelefono, .CalePNombre {
+    width: 37%;
+    text-align: center
+}
+.CalePSelect{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+#Cale-ContenedorTabla{
+    max-height: 270px;
+    overflow-y: auto;
 }
 
 

@@ -1,0 +1,1 @@
+var URLdireccion='http://localhost/CalendarioArrastrar/CalendarioDragAndDrop/js/Servicio/';
