@@ -1,6 +1,20 @@
 //Vareable local
 var contadorSemana=0;
 var ListaCitasEditables =new Array();
+var nomMeses = ['Ene',
+ 'Feb',
+ 'Mar',
+ 'Abr',
+ 'May',
+ 'Jun',
+ 'Jul',
+ 'Ago',
+ 'Sep',
+ 'Oct',
+ 'Nov',
+ 'Dic'];
+
+ var hoy = new Date();
 
 /**LISTENERS-------------------------- */
 window.addEventListener('load',()=>{
@@ -39,7 +53,8 @@ function ArmarCalendario(fecha){
             fechaFinal:fechaFinal.getFullYear()+'/'+(fechaFinal.getMonth()+1)+'/'+fechaFinal.getDate()
         };
 
-        document.querySelector('.AreaNavegacion label').innerHTML="Semana: "+fechaInicial.getDate()+'-'+fechaFinal.getDate();
+        let nomM = nomMeses[fechaInicial.getMonth()];
+        document.querySelector('.AreaNavegacion label').innerHTML="Semana: "+fechaInicial.getDate()+'-'+fechaFinal.getDate()+' '+nomM;
         
         //Armar Calendario / assembly of calendar
         for(let i=0;i<12;i++){
@@ -120,7 +135,8 @@ function RetrocederSemana(){
     ArmarCalendario(hoy)
         .then(CargarCitas)
         .then(AgregarListenersEmpty)
-        .then( AgregarListenersBotonCita);
+        .then( AgregarListenersBotonCita)
+        .then(FiltrarPorDoctor);
 }
 function AdelantarSemana(){
     contadorSemana+=1;
@@ -129,7 +145,8 @@ function AdelantarSemana(){
     ArmarCalendario(hoy)
         .then(CargarCitas)
         .then(AgregarListenersEmpty)
-        .then( AgregarListenersBotonCita);
+        .then( AgregarListenersBotonCita)
+        .then(FiltrarPorDoctor);
 }
 function AgregarListenersEmpty(){
     return new Promise((resolve,rejet)=>{
@@ -181,6 +198,7 @@ function CargarCitas(fechas){
             let dia = '';
             let objtTemp;
             let estado;
+            let visible='';
             for(cita of citas){                
 
                 //Obtenemos el id para referenciar la etiqueta / get  id to refer the tag html
@@ -202,6 +220,7 @@ function CargarCitas(fechas){
                     idBoton='Boton'+ListaCitasEditables.length;
                     //Se agrega a la lista temporal de citas / add appointment  temporal list
                     ListaCitasEditables.push(cita);
+                    visible='';
 
                 }else if (cita.estado=="AGENDADO"){ 
 
@@ -210,17 +229,37 @@ function CargarCitas(fechas){
                     idBoton='Boton'+ListaCitasEditables.length;
                     //Se agrega a la lista temporal de citas / add appointment  temporal list
                     ListaCitasEditables.push(cita);
+                    visible='';
 
                 }else if (cita.estado == 'CANCELADO'){
                     estado = 'citaCancelada';
+                    idBoton='BotCa'+ListaCitasEditables.length;
+                    visible='botonModCitaOFF';
+
                 }else{
                     estado = 'citaConcluido';
+                    idBoton='BotCo'+ListaCitasEditables.length;
+                    visible='botonModCitaOFF';
                 }
 
+                //Mostrar citas canceladas o concluidas
+                let sw = document.getElementById('SwCitasCanCon')
+                if(sw.checked){
+                    visible='';
+                }
+                
+
                 //Agregamos el boton // add the button
-                cadena= '<div class="BotonCita '+estado+'" id="'+idBoton+'">'+
+                cadena= '<div class="BotonCita '+estado+' '+visible+'" id="'+idBoton+'" title="Cita:'+cita.idCita+'">'+
                     '<span>'+cita.hora+'</span><br><span>'+cita.doctor+'</span>'+
-                    '<div class="botonModCita  botonModCitaOFF" id="Cale-'+idBoton+'"><i class="fas fa-ellipsis-v"></i></div></div>';
+                    '<div class="botonModCita  botonModCitaOFF" id="Cale-'+idBoton+'"><div class="botonModOpciones">';
+                let hoy = new Date();
+                let fecha= new Date(cita.fecha.date);
+                if(hoy.getFullYear()>=fecha.getFullYear() && hoy.getMonth() >= fecha.getMonth() && hoy.getDate()>=fecha.getDate()){
+                    cadena+='<i class="fas fa-check" onclick="ConfirmarAsistencia(event,\''+cita.idCita+'\',\''+cita.NombrePaciente+'\')"></i>';
+                }
+                    cadena+='<i class="fas fa-times" onclick="CancelarCita(event,\''+cita.idCita+'\',\''+cita.NombrePaciente+'\')"></i>'+
+                    '<i class="fas fa-ellipsis-v"></i></div></div></div>';
 
                 //Agregamos al calendario // add to the calendar
                 objtTemp.innerHTML=cadena;
@@ -238,5 +277,6 @@ function CambiarSucursal(){
     ArmarCalendario(hoy)
         .then(CargarCitas)
         .then(AgregarListenersEmpty)
-        .then( AgregarListenersBotonCita);
+        .then( AgregarListenersBotonCita)
+        .then(FiltrarPorDoctor);
 }

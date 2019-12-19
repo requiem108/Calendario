@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/Modulo.css">
     <link rel="stylesheet" href="css/Botones.css">
     <link rel="stylesheet" href="css/CheckBox.css">
-    
+    <link rel="stylesheet" href="css/CalendarioMes.css">
+
+    <link rel="stylesheet" href="css/OcultarObjetos.css">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title></title>
@@ -195,6 +197,17 @@
           </div>
            
        </div>
+       
+       <div class="BotonMostrarOff" id="Cale-MostrarCC">           
+                       <label for="">Citas concluidas y canceladas</label>
+                        <label class="switch">
+                          <input type="checkbox" name="switchAuxiliar" id="SwCitasCanCon">
+                          <span class="slider round "></span>  
+                        </label>
+        </div>
+       
+       
+       
        <div class="AreaBotones">
           
            <input id="Cale-BSemana" onclick="" class="CaleBotones" type="submit" value="Semana" onpaste="return false">
@@ -202,7 +215,7 @@
            <input id="Cale-BMes" onclick="" class="CaleBotones" type="submit" value="Mes" onpaste="return false">
            
        </div>
-       <div class="AreaNavegacion">
+       <div class="AreaNavegacion" id="Cale-AreaNavegacion">
            <i class="fas fa-chevron-circle-left"></i>
            
            <label>Informacion</label>
@@ -214,6 +227,32 @@
                   <table class="DiasHoras" id="CalendarioTabla">
                   </table>
                    
+                  <div class="Meses venPOff" id="Cale-Meses">
+                    <div class="mes"id="01"><div class="Cale-ConHole"><div class="hole"></div>
+                      <div class="hole"></div></div>Ene</div>
+                      <id class="mes" id="02"><div class="Cale-ConHole"><div class="hole"></div>
+                        <div class="hole"></div></div>Feb</id>
+                        <id class="mes" id="03"><div class="Cale-ConHole"><div class="hole"></div>
+                          <div class="hole"></div></div>Mar</id>
+                          <id class="mes" id="04"><div class="Cale-ConHole"><div class="hole"></div>
+                            <div class="hole"></div></div>Abr</id>
+                            <id class="mes" id="05"><div class="Cale-ConHole"><div class="hole"></div>
+                              <div class="hole"></div></div>May</id>
+                              <id class="mes" id="06"><div class="Cale-ConHole"><div class="hole"></div>
+                                <div class="hole"></div></div>Jun</id>
+                                <id class="mes" id="07"><div class="Cale-ConHole"><div class="hole"></div>
+                                  <div class="hole"></div></div>Jul</id>
+                                  <id class="mes" id="08"><div class="Cale-ConHole"><div class="hole"></div>
+                                    <div class="hole"></div></div>Ago</id>
+                                    <id class="mes" id="09"><div class="Cale-ConHole"><div class="hole"></div>
+                                      <div class="hole"></div></div>Sep</id>
+                                      <id class="mes" id="10"><div class="Cale-ConHole"><div class="hole"></div>
+                                        <div class="hole"></div></div>Oct</id>
+                                        <id class="mes" id="11"><div class="Cale-ConHole"><div class="hole"></div>
+                                          <div class="hole"></div></div>Nov</id>
+                                          <id class="mes" id="12"><div class="Cale-ConHole"><div class="hole"></div>
+                                            <div class="hole"></div></div>Dic</id>
+                  </div>
                
                
            </div>

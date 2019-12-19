@@ -184,7 +184,8 @@ body{
     opacity: .5;
 }
 .citaConcluido{
-    background-color: rgb(163, 177, 112);
+    background-color: rgb(38, 65, 64);
+    opacity: .5;
 }
 .BotonCitaSelect{
     background-color: #f95a5e;   
@@ -198,31 +199,41 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #424242;
-    width: 40px;
+    width: 80px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 10px;
     color: white;
     -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
     box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
-    margin: -60px 60px;
-  
+    margin: -80px 60px;
+}
+.botonModOpciones{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.botonModOpciones i{
+    padding: 10px;
+    
 }
 .botonModCita::before{
-    content: '';
-    width: 25px;
-    height: 25px;
-    background-color: #424242;
-    transform: rotate(45deg);
+    content:'';   
+    transform: rotate(150deg);
     position: absolute;
-    margin-left: -7px;    
+    margin-left: -40px;
+    margin-top: 16px;
+    height: 0;
+    border-left: 20px solid #424242;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    
    }
 .botonModCita i{
     z-index: 1;
 }
-.botonModCitaOFF{
-    display: none;
-}
+
 /*REGLA HORAS*/
 .DiasHoras  .ReglaHora{
     position: absolute;    
@@ -356,4 +367,19 @@ body{
     }
     
 }
+
+/*
+content: '';
+    width: 25px;
+    height: 25px;
+    
+    transform: rotate(150deg);
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 16px;
+    height: 0;
+    border-left: 20px solid #424242;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
 

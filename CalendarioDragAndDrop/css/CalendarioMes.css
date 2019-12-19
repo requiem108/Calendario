@@ -1,0 +1,45 @@
+.Meses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mes{
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 15px -6px rgba(0,0,0,0.75);
+    transition: .5s;
+}
+.mes:hover{
+    -webkit-box-shadow: 0px 7px 15px -6px rgba(96, 219, 213, 0.75);
+    -moz-box-shadow: 0px 7px 15px -6px rgba(96, 219, 213, 0.75);
+    box-shadow: 0px 7px 15px -6px rgb(226, 151, 91);
+    background-color: #d6d6d6;
+    
+}
+.mes .Cale-ConHole{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(226, 151, 91);
+}
+.hole{
+    background-color: #696767;
+    border-radius: 10px;
+    width: 15px;
+    height: 40px;
+    position: relative;
+    top: -20px;
+}
+.actual{
+    background-color: #97cecc;
+    color: white;
+}
